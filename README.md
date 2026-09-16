@@ -26,7 +26,7 @@ This project treats that gap as the central research question, rather than an in
 
 ## Key Findings
 
-- **Baseline accuracy:** ~93% validation accuracy on PlantVillage's clean lab-style images.
+- **Baseline accuracy:** ~90% validation accuracy on PlantVillage's clean lab-style images.
 - **Domain-shift collapse:** Accuracy dropped to ~25% overall on PlantDoc's real-world field images — a severe, but not uniform, decline.
 - **Lesion size matters:** Diseases with large, high-contrast lesions (e.g. Tomato Late Blight, ~69% on PlantDoc) held up far better under domain shift than diseases with small, subtle symptoms (e.g. Tomato Bacterial Spot, <1% on PlantDoc). The likely cause: resizing field images down to the model's 224×224 input size shrinks small lesions to near-invisibility, while large lesions remain visible.
 - **Uncertainty is a real but imperfect signal:** MC Dropout confidence averaged 0.72 on correct predictions vs. 0.65 on wrong ones. The gap was clearest at the extremes — very high confidence (0.9+) reliably meant a correct prediction, and very low confidence reliably meant a wrong one — but the signal was noisier in the middle range.
